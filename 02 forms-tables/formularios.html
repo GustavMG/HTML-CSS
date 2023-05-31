@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <!--El atributo "action" me permite enlazar con u servidor remoto para enviar mis datos, es decir la conexión con el back-end-->
+    <form action="resultados.html" method="get">
+        <div>
+            <!--Es importante definir que va tener mi formulario, lo ideal es usar un label-->
+                <!--Se debe relacionar el label con el campo que se va a llenar mediante el atributo "for" y el name del input-->
+            <label for="nombre-usuario">Nombre de usuario</label>
+            <!--Lo ideal es poner el mismo nombre al name y al id para identificarlo mejor-->
+                <!--El atributo type es el que me va permitir saber que tipo de entrada voy a tener-->
+                <!--El atributo placeholder permite mostrar un texto antes de ingresar datos, sirve para guiar al usuario-->
+                <!--El atributo requiered obliga a que se tenga que llenar este input para poder enviar el formulario-->
+                <!--El atributo readonly permite que sea de solo lectura y no se pueda editar el campo-->
+                <!--El atributo disabled permite que sea de solo lectura y no se pueda editar el campo, puede servir por ejemplo para limitar y que si hay campos que no se han llenado estos se llenen y solo entonces pueda pasar a editar el campo-->
+                <!--Con el atributo autofocus podemos elegir un campo que sea el primero en seleccionarse-->
+            <input name="nombre-usuario" id="nombre-usuario" required>
+        </div>
+        <br/>
+        <div>
+            <!--Esta etiqueta nos sirve para agregar un cuadro de comentarios-->
+            <label for="comentarios">Comentarios</label>
+            <textarea name="comentarios" id="comentarios"></textarea>
+        </div>
+        <br/>
+
+        <div>
+            <label for="email">¿Cual es tu e-mail?</label>
+            <input type="email" name="email" id="email" required />
+        </div>
+        <br/>
+
+        <div>
+            <label for="edad">¿Cual es tu edad?</label>
+            <!--Este atributo no cambia mucho visualmente de text, los botones de subir y bajar ayudan en las versiones moviles para evitar desplegar un teclado para escribir-->
+                <!--Puedo definir el numero maximo(max), el numero minimo(min) y el aumento (step)-->
+                <!--Puedo tambien darle un valor iniciar al input con el atributo "value", si se modifica y se actualiza ya nos e regresa el valor inicial-->
+            <input type="number" name="edad" id="edad" value="18" min="18" max="60" step="1" required />
+        </div>
+        <br/>
+
+        <div>
+            <label for="fNacimiento">¿Cual es tu fecha de nacimiento?</label>
+            <input type="date" name="fNacimiento" id="fNacimiento" />
+        </div>
+        <br/>
+
+        <div>
+            <!--Al cambiar el atributo "type" de "text" a "password" me permite indicar que es contraseña y NO me muestra los datos ingresados-->
+            <label for="password">Contraseña</label>
+            <input type="password" name="password" id="password" required>
+        </div>
+        <br/>
+
+        <!--BOTONES EN HTML QUE SIRVEN PARA ENVIAR INFORMACIÓN-->
+         <!--Si quiero enviar los datos de formulario utilizo el tipo submit-->
+            <!--Este tipo de entrada pone automaticamente un boton en el navegador que tiene una leyenda de enviar o enviar consulta dependiendo del navegador y el idioma que se tenga seleccionado, estos datos se envían mediante el metodo "post" marcado en el inicio del formulario en donde nosotros mediante el atributo action le decimos al formulario a donde va a mandar los datos (revisar el inicio del formulario): form action="http://midominio.com/miservicioWeb.php" method="post"-->
+            <!--Este boton debe estar DENTRO DEL FORMULARIO para que sepa cual información enviar-->
+            <!--Podemos cambiarle el texto por defecto y poner uno que queramos mediante el atributo value-->
+            <!--Este envio de datos no requiere de JavaScript-->
+            <input type="submit" value="Enviar Formulario" />
+            <!--Se puede hacer una verificación externa mediante JavaScript en lugar del requiered, para esto en lugar de tipo submit se pondría como tipo button y al presionarse ese boton podemos enlazar con JavaScript para que mediante un codigo se haga la verificaicón de los datos o la estructura y posteriormente enviar el formulario-->
+
+            <!--Este es otro boton, nos sirve para limpiar los datos llenados del formularios y deja todo en el estado inicial-->
+            <input type="reset" value="Borrar Formulario" />
+    </form>
+</body>
+
+</html>
