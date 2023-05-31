@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Multimedia con HTML</title>
 </head>
 <body>
     
+    <h2>Imagenes</h2>
+    <p>
+        Esta es una imagen cargada desde los archivos internos del proyecto (relativa), tiene el atributo src para buscar la dirección de la imagen, el atributo alt para mostrar un texto cuando no cargue la imagen, el atributo title para mostrar un texto cuando se pase el raton encima y los atributos width y height para modificar el tamaño de la imagen
+    </p>
+    <img src="./assets/security-webp.webp" alt="imagen security" title="imagen security" width="300" height="300" />
+    <!--Esta es una imagen obtenida desde directorio interno y puedo modificar las dimensiones en pixeles con los parametros width y hight. Con la propiedad alt doy una información de la imagen, sirve para cuando el navegador no puede cargar imagenes o se tienen una configuración de no mostrar imagenes. El atributo title tambien es bueno anexarlo para dar información al usuario, en este caso para que al pasar raton encima de información. Podemos en las propiedas de las imágenes verificar cuales son sus dimensiones para poder escalarla bien-->
+    <br/>
+
+    <p>
+        Esta es una imagen cargada desde un enlace externo (absoluta), tiene el atributo src para buscar la dirección de la imagen, el atributo alt para mostrar un texto cuando no cargue la imagen, el atributo title para mostrar un texto cuando se pase el raton encima y los atributos width y height para modificar el tamaño de la imagen
+    </p>
+    <img src="https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="imagen security" title="imagen security" width="300" height="300" />
+
+    <h2>Video</h2>
+    <!--La etiqueta video es la que nos va permitir jalar los archivos de audio a utilizar-->
+            <!--Se requiere manejar los formatos y referencias de los videos para ser lo mas compatible posible con los navegadores-->
+            <!--Tambien puedo controlar si quiero que se reproduzca de inicio y demas como con el audio-->
+            <!--Se puede utilizar la propiedad width para modificar en ancho pero eso podria ser contraproducente si el video es grande ya que no se va a apreciar-->
+            <!--Puedo ponerle un widht de 100% para que se ajuste automaticamente al ancho de la ventana-->
+            <!--"control" nos permite pausar, poner en pantalla grande, modificar volumen y ver el estado de avance del audio, varia la presentación de acuerdo al navegador y podemos mediante CSS darle una mejor vista-->
+            <!--Como los videos pueden tardar en cargar, tenemos el atributo "poster" que nos permite seleccionar una imagen que nos sirve para que se visualice algo durante el tiempo que carga el video, hay que buscar mediante referencia en donde tengamos esa imagen, como las miniaturas de youtube-->
+            <!--Hay que evitar poner videos muy pesados pq hacer que la pagina tarde en cargar, lo ideal es hacer referencias a Youtube u otros servicios de video para que no se cargue nuestra pagina y no se cargue el ancho de banda-->
+            <!--Si se utiliza el atributo autoplay hay que ligarlo con el atributo muted para que se reproduzca automaticamente pero no este sonando ya que esto puede afectar la experiencia del usuario-->
+    <video width="300" height="300" poster="./assets/security-webp.webp" controls>
+        <source src="./assets/video-mp4.mp4" type="video/mp4" />
+    </video>
+
+    <h2>Audios</h2>
+    <!--La etiqueta audio es la que nos va permitir jalar los archivos de audio a utilizar-->
+            <!--ES IMPORTANTE QUE EL USUARIO DECIDA SI QUIERE TENER AUDIO Y NO ACTIVARLO DE PRINCIPIO, esto lo hacemos con "control"-->
+            <!--"control" nos permite pausar, modificar volumen y ver el estado de avance del audio, varia la presentación de acuerdo al navegador y podemos mediante CSS darle una mejor vista-->
+            <!--Tambien puedo hacer que el audio se reproduzca automaticamente con "autoplay"-->
+            <!--Con "loop" hacemos que el audio se mantenga reproduciendo-->
+            <!--Con "muted" hacemos que el audio este apagado al entrar a la pagina y se active posteriormente-->
+            <!--Con "preload" hacemos que el audio este disponible antes de haberse llamado-->
+    <audio controls>
+        <source src="./assets/bbc_caves--cav_07072005.mp3" />
+    </audio>
 </body>
 </html>
