@@ -1,0 +1,35 @@
+/* Prueba de colores al titulo 1*/
+h1{
+    color: red;
+}
+/* Prueba de colores al parrafo*/
+p{
+    color: blue;
+    font-size: 16pt;
+}
+
+#primer-parrafo{
+    color: aqua;
+    font-size: 12pt;
+}
+
+/*Selector de con clase class*/
+#segundo-parrafo{
+    color: blueviolet; 
+}
+
+/*Selector de con identificador id*/
+.encabezado{
+    font-size: 24pt;
+    text-transform: uppercase;
+}
+
+/*Con el * hacemos que un estilo se le aplique a todas las etiquetas*/
+/*Se le puede agregar una condición mas para que se le aplique a las clases o id que compartan este identificador, este es un SELECTOR UNIVERSAL*/
+*.warning{
+    color: red;
+}
+
+.autor, .fecha, .ubicacion, h1, #segundo-parrafo{
+    text-decoration: underline;
+}

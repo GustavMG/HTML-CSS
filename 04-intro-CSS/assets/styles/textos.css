@@ -1,0 +1,11 @@
+/*Puedo importar los estilos directamente a la hoja de CSS en lugar de anexarlo al HEAD de HTML, esto se ve mas orenado ya que no metemos mas datos en el HTML y pones los estilos aqui en CSS donde deben ir*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dosis:wght@200;300;600;800&display=swap');
+
+html{
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+    /*Fuentes de Google Fonts*/
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Dosis', sans-serif; 
+    font-size: larger;
+    font-weight: 200;
+}

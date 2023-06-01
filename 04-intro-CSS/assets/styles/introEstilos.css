@@ -1,0 +1,49 @@
+/*Selección de colores sencillos que trae el programa por defecto*/
+.colores{
+    color: orangered;
+}
+
+/*Puedo utilizar colores con su identificador hexadecimal*/
+.color-hexadecimal{
+    color: #755B69;
+}
+
+/*Puedo utilizar colores combinandos con el RGB*/
+.color-rgb{
+    color: rgb(100, 0, 200);
+}
+
+/*Puedo utilizar colores combinandos con el RGB y aparte darle una transparencia con el ultimo parámetro*/
+.color-rgba{
+    color: rgba(10, 10, 10, 0.2);
+}
+
+/* Fondos */
+.fondo{
+    /*background-color: cornflowerblue;*/
+    background-image: url("https://unbounce.com/photos/Gradient-Background.png");
+    background-position: right bottom;
+}
+
+/*Modificación del alto y ancho mediante propiedad width(ancho) y height(alto)*/
+.ancho{
+    background-color: aquamarine;
+    width: 100px;
+}
+
+.alto{
+    background-color: blueviolet;
+    height: 200px;
+}
+/*Prueba de tarjeta personalizada*/
+.tarjeta{
+    border-style: solid;
+    border-color: rgb(150, 150, 150);
+    border-width: 1px;
+    /*border-top: none;  /*Puedo eliminar partes del border con el atributo none dependiendo cual borde seleccione*/
+    /*padding: 10px 20px; /*Si se le ponen 2 parametros  el 1ro es para arriba/abajo y el 2do para izquierda/derecha*/
+    /*padding: 10px 20px 30px; /*Si se le ponen 3 parametros el 1ro es para arriba, el 2do para izquierda/derecha y el 3ro para abajo*/
+    /*padding: 10px 20px 30px 40px; /*Si se le ponen 4 parametros el 1ro es para arriba, el 2do para derecha, el 3ro para abajo y el 4to para izquierda como en el sentido de un reloj, Lo que mas se suele utilizar es el padding generico, o el de arriba/abajo izquierda/derecha*/
+    padding: 10px 20px;
+    margin: 10px; /*No se suele usar un margen desigual*/
+}
