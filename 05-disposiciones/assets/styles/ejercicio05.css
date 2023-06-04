@@ -16,3 +16,14 @@
     /*Deben reagruparse (wrap) cuando el ancho del viewport cambia*/
     flex-wrap: wrap;
 }
+
+/*Respuesta de OpenBootcamp*/
+/*
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.galeria img {
+    width: 300px;
+}*/
