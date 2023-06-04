@@ -1,0 +1,45 @@
+.contenedor-hidden{
+    /*Con esta propiedad todo lo que sobre sale se oculta y NO se puede acceder al resto del texto*/
+    background-color: bisque;
+    width: 300px;
+    height: 100px;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.contenedor-scroll{
+    /*Crea una barra de scroll que nos permite hacer scroll para acceder al contenido restante*/
+    background-color: bisque;
+    width: 300px;
+    height: 100px;
+    padding: 15px;
+    overflow: scroll;
+}
+
+.contenedor-visible{
+    /*Este es el que trae por defecto, en donde el texto sobre sale y ocupa TODO el espacio que necesite*/
+    background-color: bisque;
+    width: 300px;
+    height: 100px;
+    padding: 15px;
+    overflow: visible;
+}
+
+.contenedor-auto{
+    /*Este nos optimiza de acuerdo a lo que necesite para ajustarse al tamaño del recuadro, se puede ajustar en lo horizontal o vertical*/
+    background-color: bisque;
+    width: 300px;
+    height: 100px;
+    padding: 15px;
+    overflow: auto;
+}
+
+.contenedor-scroll-x{
+    /*Crea una barra de scroll en X o Y  que nos permite hacer scroll para acceder al contenido restante*/
+    background-color: bisque;
+    width: 300px;
+    height: 100px;
+    padding: 15px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}

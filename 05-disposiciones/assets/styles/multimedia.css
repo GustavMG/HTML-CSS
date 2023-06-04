@@ -1,0 +1,37 @@
+*{
+    /*Aqui elimino los margene sy padding que trar por defecto para utilizar los que yo quiera agregar*/
+    padding: 0;
+    margin: 0;
+}
+.imagen-principal{
+    /*Con el width al 100vw(ViewWidth) le estoy diciendo a mi imagen que ocupe todo el ancho de la pantalla*/
+    width: 100vw;
+    opacity: .5;
+}
+
+.imagen-principal:hover{
+    /*Esta propiedad es para que haga algo al pasar el raton encima*/
+    opacity: 1;
+    
+}
+
+.galeria{
+    /*Le aplicamos los estilos al contenedor de las imagenes, esto hace que esten "alineadas" en horizontal*/
+    display: flex;
+    /*Le estamos aplicando un flex display para organizar el contenido lo que nos lo agrupa */
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Le damos una separación de 10px con el gap*/
+}
+
+.imagen-galeria{
+    width: 150px;
+}
+
+.imagen-galeria:hover{
+    /*Esta propiedad es para que haga algo al pasar el raton encima*/
+    opacity: 0.3;
+    /*Le estamos diciendo que se cambie la opacidad a 0.3*/
+    cursor: pointer;
+    /*Le estamos diciendo que cambie el cursor a pointer (manita como para ir a un enlace)*/
+}

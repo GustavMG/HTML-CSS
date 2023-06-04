@@ -1,0 +1,43 @@
+/*
+
+Verificar este recurso para ver de forma mas grafica las propiedades del "justify-content" y el "align-items"
+es muy dinamico de ver.
+https://codepen.io/enxaneta/full/adLPwv
+
+*/
+
+/*Evitar la sobre utilización del flex cuando no haga falta, esto para mejor practicas, el Display Flex se utiliza mucho por el uso de dispositivos moviles y demas*/
+.flex { /*Aqui creo un espacio para hacer la demostración del uso de flex*/
+  /*Usualmente el contenido 1, 2 y 3 me lo pondrá uno abajo del otro haciendo un OverFlow si el espacio de trabajo es mas chico del que se requiere para contener los 3 items*/
+  display: flex; /*Al color la propiedad flex posiciona todo de una manera ordenada, por defecto en fila |cont1|cont2|cont3| es decir de manera HORIZONTAL*/
+  flex-direction: column; /*Con esta propiedad le decimos que en lugar de que el eje principal sea el Horizontal sea el VERTICAL, aqui hay opciones de fila, columna y para que vayan de reversa, es decir en lugar de |cont1|cont2|cont3| sea --> |cont3|cont2|cont1|*/
+  background-color: yellow;
+  height: 300px;
+  justify-content: space-around; /*Esta propiedad me posiciona los elementos que tiene por dentro con relación al eje principal, tenemos el start (que es el que viene por defecto) que nos coloca todo de izquierda a derecha, el end es lo contrario o sea de derecha a izquierda, space-beteewn distribuye el espacio sobrante entre los espacios para hacerlo mas uniforme, con center nos coloca en el centro el contenido y el space around  es como el space-beteewn solo que nos pone un espacio por la izquierda y espacio por la derecha, se mueven de acuerdo al tamaño de la vetana y los contenedor se van redimensionando */
+  align-items: flex-start; /*Esta propiedad me lo posiciona arriba del todo*/
+  /*align-items: stretch;*/ /*Con esta propiedad si yo NO le digo que altura debe tener entonces me dimensiona los items a lo alto de TODO el contenedor, este es el por defecto*/
+  /*align-items: center;*/ /*Me centra en el eje vertical Y, y la altura sera en función del contenido de los items*/
+  /*align-items: flex-end;*/ /*Esta propiedad me lo posiciona abajo del todo*/
+  /*flex-wrap: wrap;*/ /**Con esta propiedad NO se hace un redimensionamiento de los contenedores si no que para evitar esto los va movimiendo, por ejemplo si se hace mas estrecha la ventana y ya no caben los elementos baja 1 si solo caben 2, si se hace aun mas chica entonces baja ese segundo elemento y quedaria en forma de columna todo*/
+}
+
+.contenido-1 {
+  background-color: white;
+  /* height: 200px; */
+  width: 100px;
+  border: 1px solid blue;
+}
+
+.contenido-2 {
+  background-color: white;
+  /* height: 200px; */
+  width: 100px;
+  border: 1px solid blue;
+}
+
+.contenido-3 {
+  background-color: white;
+  /* height: 200px; */
+  width: 100px;
+  border: 1px solid blue;
+}

@@ -1,0 +1,23 @@
+.div-1, .div-2{
+    /*El div tiene por defecto un display: block */
+    background-color: red;
+
+}
+
+.span-1{
+    /*El span es por defecto un display: inline */
+    background-color: aquamarine;
+    float: right;
+}
+
+.span-2{
+    /*El span es por defecto un display: inline */
+    background-color: aquamarine;
+    float: left;
+}
+
+.img{
+    /*Las imagenes tienen por defecto un display: inline-block */
+    width: 50px;
+    height: 50px;
+}

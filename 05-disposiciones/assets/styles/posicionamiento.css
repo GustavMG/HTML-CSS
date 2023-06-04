@@ -1,0 +1,56 @@
+div{
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    background-color: white;
+}
+
+/*Posicionamiento Static es el por defecto, no se ve afecto si lo tratamos de mover o hacer cambios que NO sean esteticos*/
+.static{
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+/* Posicionamiento Relativo: Se posiciona en relación al posicionamiento original*/
+.relative{
+    position: relative;
+    left: 80px;/*Aqui le digo que se mueva 80px DESDE la izquierda hacia la derecha*/
+    margin-left: 10px;/*Aqui al darle un un margen izquierdo de 10px, ahora de mueve 80px despues de los 10px de margen desde la izquierda*/
+}
+
+/*Posicionamiento fijo: se posiciona en relación a la pantalla (ViewPort) y esta SOBRE o por ENCIMA de todo, siempre lo vamos a ver!!!*/
+/*Nos elimina todo el espacio sobrante y se ajusta el contenedor al contenido (se puede ver con el borde)*/
+/*Se suele usar en barras de navegación que queremos esten SIEMPRE por arriba o abajo del todo*/
+.fixed{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background-color: greenyellow;
+    z-index: 10; /*Los elemenos fijados suelen estar por encima de todo, con esta propiedad "lo subo de capa"*/
+}
+
+/*Posicionamiento absoluto: Nos permite posicionarlo al igual que el FIXED pero en DUNCIÖN a su ELEMENTO PADRE RELATIVO
+en este caso creamos un nuevo div con clase relative-container lo que o haría el PADRE RELATIVO de este div absolute para que se posicione en relación de este div relative-container en lugar del BODY que serie su Elemento Padre si estuviera fuera de cualquier cosa */
+/*Esta propiedad se ESPECIFICA con el top, rigth, bottom o left para que se pueda utilizar*/
+/*Nos elimina todo el espacio sobrante y se ajusta el contenedor al contenido (se puede ver con el borde)*/
+.absolute{
+    position: absolute;
+    bottom: 30px;
+    right: 0px;
+}
+
+.relative-container{
+    width: 800px;
+    height: 800px;
+    background-color: blue;
+}
+
+/*Posicionamiento "pegajoso": Al hacer scroll modifica su posicionamiento relative-> fixed*/
+/*Esta es una mezcla entre el Relativo y el Fijo*/
+.sticky{
+    position: sticky;
+    background-color: darksalmon;
+    color: white;
+    top: 0px; /*Aqui le digo DONDE se va a mantener pegado*/
+    z-index: 2; /*Los elemenos fijados suelen estar por encima de todo, con esta propiedad "lo subo de capa"*/
+}
