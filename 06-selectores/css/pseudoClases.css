@@ -27,6 +27,8 @@
     En este ejemplo, cuando se coloca el cursor del mouse sobre un botón, se cambia su color de fondo a amarillo. Cuando se visita un enlace (<a>), se cambia el color del texto a púrpura. Y cuando un campo de entrada (<input>) está en foco, se le aplica un borde azul.
 */
 
+/* https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements */
+
 *{
     padding: 0;
     margin: 0;

@@ -1,0 +1,14 @@
+
+/*Crea un botón con el texto "Pasa por encima" (TIP: Este texto debes agregarlo a través de un pseudo-elemento)*/
+button::before {
+    content: "Pasa por encima";
+}
+
+/*Utiliza las pseudo-clases para que cuando se pase el ratón por encima de este botón, el texto se vuelva blanco y el fondo de color verde*/
+button:hover::before {
+    /*Aqui estoy haciendo una anidación de una :pseudoClase::pseudoElemento (pseudoClase con un pseudoElemento) para que se me realice la acción al cumplirse la condición de de la pseudo clase*/
+    background-color: green;
+    color: white;
+    /*Utiliza los pseudo-elementos para cambiar el texto del botón a "¡Hecho!"*/
+    content: "¡Hecho!";
+}
