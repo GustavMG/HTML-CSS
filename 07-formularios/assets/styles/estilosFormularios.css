@@ -1,0 +1,65 @@
+.input{
+    width: 100%;
+    padding: 5px 10px;
+    border: 2px solid green;
+    border-radius: 10px;
+    margin-bottom: 10px; /*Separamos un poco con margen de 10px hacia abajo*/
+}
+
+/*Aqui como mi input de tipo texto y tipo contraseña tienen la misma "clase", puedo atacar directamente al atributo type para aplicarle un estilo en especifico, en este caso le estamos diciendo que el color sea rojo*/
+.input[type = "password"]{
+    color: red;
+}
+
+.input-moderno{
+    border: none; /*Con esta propiedad elimino los bordes del input*/
+    border-bottom: 1px solid #c2c2c2; /*Aqui ponemos solo un borde inferior de 1px de color muy claro para que proximamente cuando estemos escribiendo se cambie el color*/
+    outline: none; /*Con esta propiedad desaparezco el borde que aparece cuando estoy escribiendo en el input*/
+    padding: 5px;
+    color: #5f5f5f; /*Le damos el mismo color de texto que del borde*/
+}
+
+.input-moderno::placeholder{/*Este pseudoelemento permite hacer aplicar un estilo al atributo placeholder*/
+    color: #c2c2c2; /*Le damos color al texto del placeholder de la etiqueta input con de tipo text*/
+}
+
+.input-moderno:focus{/*Esta pseudoclase permite hacer que se realice una acción cuando se este seleccionando la clase*/
+    border-bottom: 1px solid #5f5f5f; /*Aqui ponemos solo un borde inferior de 1px de color gris*/
+}
+
+.input-background{
+    border: none;
+    outline: none;
+    background-color: aqua;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.input-background::placeholder{
+    color: #ccc;
+}
+
+.input-search{ /*Personalizamos una barra de busqueda*/
+    /*Verificar documentación: https://developer.mozilla.org/es/docs/Web/CSS/background-size */
+    border: none; /*elimino el borde*/
+    padding: 10px;
+    padding-left: 50px; /*Movemos de izquierda a derecha el cursor y el contenido del placeHolder para que no choque con la imagen de fondo*/
+    background-color: #eee;
+    border-radius: 8px;
+    margin: 10px;
+    background-image: url("../img/lupa.png"); /*Buscamos la imagen que pondremos de fondo*/
+    background-repeat: no-repeat; /*Esta propiedad es para que NO me repita la imagen varias veces ya que CSS lo trata de hacer por defecvto para cubrir los espacios*/
+    background-position: 5px; /*Aqui le indicamos la posición inicial que tendra la imagen de fondo de izqueirda a derecha, le puse 5px pq si le pongo menos mi imagen choca con los bordes redondeados del input y se ve feo*/
+    background-size: contain; /*Como mi imagen es muy grande, aqui le estoy diciendo que se ajuste al tamaño del contenedor*/
+}
+
+textarea{
+    resize: none; /*Aqui le digo que NO se puede redimensionar ya que las propiedades horizontal o vetical me permiten moverlo y ajustarlo en su eje respectivo, esto NO es común pero es bueno saber que se puede hacer*/
+}
+
+select{
+    width: 100%;
+    padding: 15px;
+    background-color: #ccc;
+}

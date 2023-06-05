@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos formularios</title>
+    <link rel="stylesheet" href="./assets/styles/estilosFormularios.css">
+</head>
+
+<body>
+    <form action="" method="">
+        <input class="input" type="text" name="name" />
+        <input class="input" type="password" name="password" />
+
+        <input class="input-moderno" type="text" name="name" placeholder="Tu nombre" />
+
+        <input class="input-background" type="text" name="name" placeholder="Tu nombre" />
+
+        <input class="input-search" type="text" name="name" placeholder="Buscar..." />
+
+        <textarea name="descripcion">Descripción</textarea>
+
+        <label for="menu-desplegable">Menu desplegable de opciones</label>
+        <select name="menu-desplegable">
+            <!--El valor entre option son las opciones que se va mostrar en el menu desplegable-->
+            <!--El valor de value es un codigo y es el que nos va servir para enviar al backend y realizar los procesos pertinentes-->
+            <!--Podemos tener una agrupación o categorias en el menu desplegable, se verá en negritas y este titulo de la agrupacion o categoría no se podrá seleccionar-->
+            <!--Aqui abro una agrupación-->
+            <optgroup label="opciones-numeros">
+                <option value="1">Opción 1</option>
+                <option value="2">Opción 2</option>
+                <option value="3">Opción 3</option>
+            </optgroup>
+            <!--Aqui cierro una agrupación-->
+            <!--Aqui abro una agrupación-->
+            <optgroup label="opciones-letras">
+                <option value="A">Opción A</option>
+                <option value="B" selected>Opción B</option><!--Selecciono un valor inicial por defecto-->
+                <option value="C">Opción C</option>
+            </optgroup>
+            <!--Aqui cierro una agrupación-->
+        </select>
+
+    </form>
+</body>
+
+</html>
