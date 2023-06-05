@@ -1,0 +1,18 @@
+.p-contenedor{
+    color: green;
+}
+
+.contenedor p{ /*Aqui con esta separación estoy diciendo que los estilos se le afetara a las etiquetas "p" que esten DENTRO del contenedor DIV con clase "contenedor, me sirve si tengo varios componentes con la misma etiqueta que quiero afectar de la misma formas*/
+    color: green;
+}
+
+/*Asi se anidan las clases y contenedores - selectores*/
+body section.main .contenedor p{ /*Tambien puedo hacer que se referencia con respecto a la seccion o algun contenedor que contenga las etiquetas a modificar, por ejemplo aqui estamos diciendo que de la etiqueta body busque la seccion que tenga la clase main y que en el contenedor (seccion en este caso) le aplique los estilos a las etiqueas p que tenga la clase .contenedor   */
+    color: blue;
+}
+
+/*Aqui por jerarquia no podemos observar la primera aplicación de la clase .contenedor a la etiqueta "p" porque hace caso a la ultima modificación que en este caso es la anidación de etiquetas y clases*/
+
+.contenedor #boton-contenedor{
+    background-color: yellowgreen;
+}

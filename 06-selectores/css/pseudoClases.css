@@ -1,0 +1,72 @@
+/*
+    Las pseudo-clases en HTML son una forma de seleccionar y estilizar elementos específicos de una página web en función de su estado o posición dentro del documento. Se utilizan en CSS para aplicar estilos adicionales a elementos que cumplen ciertas condiciones o están en un estado determinado.
+    Las pseudo-clases se agregan al selector de un elemento y se indican con dos puntos (:) seguidos del nombre de la pseudo-clase.
+
+    :hover: Se aplica cuando el cursor del mouse se coloca sobre un elemento. Por ejemplo, puedes cambiar el color de fondo de un botón cuando el mouse está sobre él.
+
+    :active: Se aplica cuando un elemento está siendo activado, generalmente al hacer clic en él. Puedes cambiar el color o estilo de un botón cuando se está presionando.
+
+    :visited: Se aplica a los enlaces visitados. Puedes cambiar el color o estilo de los enlaces visitados para diferenciarlos de los enlaces no visitados.
+
+    :focus: Se aplica a un elemento que está recibiendo el enfoque, como un campo de entrada de texto. Por ejemplo, puedes resaltar un campo de entrada cuando el usuario está escribiendo en él.
+
+    :first-child: Se aplica al primer elemento hijo dentro de su contenedor. Puedes aplicar estilos específicos al primer elemento de una lista o al primer párrafo de un contenedor.
+
+    button:hover {
+    background-color: yellow;
+}
+
+    a:visited {
+    color: purple;
+}
+
+    input:focus {
+    border: 2px solid blue;
+}
+
+    En este ejemplo, cuando se coloca el cursor del mouse sobre un botón, se cambia su color de fondo a amarillo. Cuando se visita un enlace (<a>), se cambia el color del texto a púrpura. Y cuando un campo de entrada (<input>) está en foco, se le aplica un borde azul.
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.hover{
+    width: 300px;
+    height: 100px;
+    background-color: bisque;
+}
+
+.hover:hover{/*El HOVER se activa cuando el ratón pasa por encima del item donde se le esta aplicando*/
+    background-color: burlywood;
+}
+
+.listado{
+    padding: 15px;
+    background-color: aquamarine;
+}
+
+.listado p:first-child{ /*Con esta propiedad first-child nos permite aplicar un estilo a la primer etiqueta, clase o id que se encuentre en la lectura del codigo, por ejemplo aqui lo aplica en la primera etiqueta p de la clase listado, es decir, el Párrafo 1*/
+    color: white;
+}
+
+/*p:first-child{ /*Aqui le aplicamos el estilo a la primera etiqueta "p" de cada contenedor, por ejemplo aqui evalua al div con clase HOVER y al div con clase listado, por lo que le aplica el estilo a los 2 primeros parrafos "p" pq son los que encuentra primero*/
+    /* color: white;
+} */
+
+a:link{ /*Aqui hacemos referencia a los link's NO VISITADOS*/
+    color: deeppink;
+}
+
+a:visited{ /*Aqui hacemos referencia a los link's YA VISITADOS*/
+    color: crimson;
+}
+
+a:hover{/*El HOVER se activa cuando el ratón pasa por encima de los enlaces*/
+    color: pink;
+}
+
+a:active{ /*Aqui hacemos que los link's se les aplique un estilo AL PRESIONAR el enlace*/
+    color: greenyellow;
+}

@@ -1,0 +1,81 @@
+/*
+Los pseudo-elementos en HTML y CSS son selectores especiales que permiten acceder y estilizar partes específicas de un elemento HTML. A diferencia de las pseudo-clases, que seleccionan elementos en función de su estado o posición, los pseudo-elementos seleccionan y estilizan partes particulares de un elemento.
+
+Los pseudo-elementos se indican con dos puntos dobles (::) seguidos del nombre del pseudo-elemento. Aquí tienes algunos ejemplos de pseudo-elementos comunes:
+
+::before: Inserta contenido antes del contenido de un elemento. Puedes utilizarlo para agregar elementos o texto decorativo antes de un elemento en particular.
+
+::after: Inserta contenido después del contenido de un elemento. Es similar a ::before, pero agrega contenido después del elemento.
+
+::first-line: Selecciona la primera línea de texto dentro de un elemento. Puedes aplicar estilos específicos a la primera línea de un párrafo, por ejemplo.
+
+::first-letter: Selecciona la primera letra de un elemento. Puedes aplicar estilos especiales a la primera letra de un párrafo o un encabezado, como cambiar su tamaño o estilo.
+
+Estos son solo algunos ejemplos de pseudo-elementos, pero existen otros, como ::selection, ::placeholder, ::marker, entre otros. Cada pseudo-elemento tiene su propio propósito y permite estilizar partes específicas de un elemento sin la necesidad de modificar la estructura HTML.
+
+p::before {
+  content: "Antes ";
+  font-weight: bold;
+}
+
+p::after {
+  content: " Después";
+  font-style: italic;
+}
+
+h1::first-letter {
+  font-size: 2em;
+  color: red;
+}
+
+En este ejemplo, se agrega el texto "Antes " antes del contenido de los elementos <p>, y se agrega el texto " Después" después del contenido de los elementos <p>. Además, se aplica un estilo especial a la primera letra de los encabezados <h1>, aumentando su tamaño y cambiando su color a rojo.
+
+Los pseudo-elementos son útiles para agregar contenido o estilizar partes específicas de un elemento sin necesidad de modificar la estructura HTML. Te permiten crear efectos visuales, añadir decoraciones y personalizar la presentación de tu página web de manera más detallada y precisa.
+*/
+
+.contenedor{ /*Todos loe elementos tienen pseudoelemento de un after y un before*/
+    width: 300px;
+    height: 100px;
+    background-color: aquamarine;
+}
+
+div{
+  background-color: blue;
+}
+
+span.frase{ /*Aqui le doy un estilo italic al texto que tengo en el span de manera ANIDADA*/
+  font-style: italic;
+}
+
+span.frase::before{ /*Aqui le agrego al PRINCIPIO del texto un '<<', se tiene que poner entre COMILLAS, y aparte le estoy dando un tamaño especifico a estos caracteres que le anexe*/
+  content: '<<';
+  font-size: xx-small;
+}
+
+span.frase::after{/*Aqui le agrego al FINAL del texto un '<<', se tiene que poner entre COMILLAS, y aparte le estoy dando un tamaño especifico a estos caracteres que le anexe*/
+  content: '>>';
+  font-size: xx-small;
+}
+
+.libro{ /*Aqui estoy dandole solo un color de fondo, un padding y un tipo de letra arial a este contenedor de texto*/
+  background-color: bisque;
+  padding: 15px;
+  font-family: arial;
+}
+
+.libro p::first-letter{ /*Aqui le estoy diciendo al html que me ponga la PRIMERA LETRA en un tamaño grande*/
+  font-size: xx-large;
+}
+
+.libro p::first-line{  /*Aqui le estoy diciendo al html que me ponga la PRIMERA LINEA de texto en color blanco, si el texto es corto no se podrá apreciar la diferencia de color*/
+  color: white;
+}
+
+.libro p::selection{  /*Aqui le estoy diciendo al html mediante el tributo ::selection que al momento de seleccionar un texto este se ponga con un color de fondo "chocolate" y un color de texto "lima", USUALMENTE al seleccionar texto este se vuelve blanco y el fondo AZUL, no es muy utilizado en las paginas pero es bueno saber que se puede tener esta modificación */
+  background-color: chocolate;
+  color: lime;
+}
+
+.listado li::marker{ /*Aqui le estamos aplicando un color rojo a las MARCAS que tienen las listas ordenadas o desordenadas*/
+  color: red;
+}
