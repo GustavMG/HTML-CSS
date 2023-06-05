@@ -12,3 +12,5 @@ button:hover::before {
     /*Utiliza los pseudo-elementos para cambiar el texto del botón a "¡Hecho!"*/
     content: "¡Hecho!";
 }
+
+/*RECORDATORIO: En este ejercicio debí trabajar con el id que le puse en lugar del boton directamente, en esta ocasión no hubo conflicto ya que solo habia un boton al cual aplicar las acciones*/
