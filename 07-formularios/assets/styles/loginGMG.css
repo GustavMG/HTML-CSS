@@ -1,0 +1,260 @@
+/*Conexión con las fuentes de Google Fonts en el CSS en lugar de ocupar espacio en el HTML*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+/*Aplicamos la fuente a TODO el documento*/
+*{
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+.container{
+    /*La propiedad margin: auto establece los márgenes izquierdo y derecho de manera automática, de modo que el elemento se ajusta al centro horizontal del contenedor.*/
+    /*centramos un elemento horizontalmente dentro del contenedor del sign up.*/
+    margin: auto;
+    /*Usamos disposición flex para colocar de manera ordenada, por defecto en fila |cont1|cont2|cont3| es decir de manera HORIZONTAL*/
+    display: flex;
+    /*Colocamos en manera de columnas los elementos*/
+    flex-direction: column;
+    /*centra en el eje vertical Y*/
+    align-items: center;
+    justify-content: center;
+    /*Le damos especio entre los componentes, esto es a criterio*/
+    gap: 30px;
+    /*Sin un ancho definido, el elemento se ajustará automáticamente al ancho completo del contenedor y no aparecerá centrado.*/
+    width: 450px;
+}
+
+
+/*Personalización de botones para acceso mediante redes*/
+.botones-redes{
+    /*Usamos disposición flex para colocar de manera ordenada, por defecto en fila |cont1|cont2|cont3| es decir de manera HORIZONTAL*/
+    display: flex;
+    /*Alineamos los botones al principio, si se lo quitamos quedan en el centro*/
+    align-self: flex-start;
+    /*Separamos ambos botones entre si*/
+    gap: 30px;
+}
+
+.btn-google{
+    /*Le damos detallitos esteteticos*/
+    background-color: #1A73E8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /*Le damos una altura al boton calculando que la imagen que lleve dentro se vea bien y no chiquita*/
+    height: 40px;
+    /*Ordenamos de manera horizontal los elementos DENTRO del boton(imagen y texto)*/
+    display: flex;
+    /*Alineamos verticalmente (y)*/
+    align-items: center;
+    /*Le damos un pequeño margen interno solo para que no queden pegados los componentes al borde*/
+    padding: 2px;
+}
+
+/*Se cambia la opacidad al pasar el ratón encima*/
+.btn-google:hover{
+    opacity: 75%;
+}
+
+
+/*Configuración de la imagen del boton*/
+.btn-google picture{
+    /*Definimos el contenedor donde se almacenará la imagen del logo, esto debe ser mas chico que el tamaño del boton y a criterio*/
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 2px;
+    /*Ordenamos y alineamos los componentes que estan DENTRO del contendor de imagen*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Reducimos el tamaño de la imagen*/
+.btn-google picture img{
+    width: 75%;
+}
+
+/*Configuramos texto del boton*/
+.btn-google span{
+    color: white;
+    font-weight: 500;
+    padding: 15px;
+}
+
+/*Boton de Twitter*/
+.btn-twitter{
+    color: #bbb;
+    background-color: #eee;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-twitter:hover{
+    background-color: #ddd;
+}
+
+/*Eliminamos la linea inferior de los enlaces*/
+.link-redes{
+    color: transparent;
+}
+
+/*Personalización de división entre inicio mediante redes y formulario*/
+.separador{
+    /*Ponemos en dispoción horizontal uno despues del otro*/
+    display: flex;
+    /*Definimos el ancho de los componentes*/
+    width: 100%;
+    /*Separamos un poco*/
+    gap: 15px;
+}
+
+/*Personalizamos las lineas separadoras*/
+.separador hr{
+    /*Le expandimos de manera proporcional dentro del contenedor, hacer mas pruebas para ver como funciona en otros casos*/
+    flex-grow: 1;
+    /*Quitamos bordes y dejamos solo el superior*/
+    border: none;
+    border-top: 1px solid #7a7a7a;
+}
+
+.separador span{
+    color: #7a7a7a;
+}
+
+/*Personalización del formulario*/
+.formulario{
+    /*Ponemos en dispoción horizontal uno despues del otro*/
+    display: flex;
+    /*Lo ponemos en vertical ya que los inputs van uno a bajo del otro*/
+    flex-direction: column;
+    /*Hacemos que ocupe todo el espacio de trabajo a lo vertical*/
+    align-items: stretch;
+    /*Los componentes de nombre y nombre de usuario estan dentro de un contenedor por lo que se aplica estas propiedades como contenedor y NO individualmente*/
+    /*Separamos un poco a criterio*/
+    gap: 30px;
+}
+
+/*Personalizamos el contenedor del nombre y nombre de usuario*/
+.nom-nomus{
+    /*Ponemos en dispoción horizontal uno despues del otro*/
+    display: flex;
+    /*Hacemos que ocupe todo el espacio de manera equitativa*/
+    /* justify-content: space-around; */
+    /*Separamos un poco los contenedores entre sí*/
+    gap: 10px;
+    /*Le damos el ancho completo*/
+    width: 100%;
+}
+
+/*Personalizamos todos los label de los inputs*/
+.container label {
+    /*Lo distribuimos uno a lado del otro para poder modificar*/
+    display: flex;
+    /*Lo ponemos en dirección de columna para que las label estan sobre los inputs*/
+    flex-direction: column;
+    /*Separamos a la misma distancia que el contenedor de nombre y nombre de usuario*/
+    gap: 5px;
+    /* width: 100%; */
+}
+/*Aplicamos un grosor o tipo de letra de TODAS las etiquetas SPAN que estan en una etiqueta LABEL dentro del FORMULARIO, lo pusimo en esta etiqueta para poder modificarlo individualmente*/
+.container label span{
+    /*Con 700 se ve bien pero podemos probar con otras de las que agarramos del Google Fonts Owo*/
+    font-weight: 700;
+}
+
+/* Le damos unos estilos indivialmente a la seccion de nombres pq estan en un contenedor ambos */
+.nom-nomus label input{
+    /*Le damos un ancho del 100% para que se ajuste a todo el contenedor en el que esta, aqui por ejemplo a los label "nombre" y "nombre de usuario" los pone de forma pareja pq ambos estan en un contenedor*/
+    width: 80%;
+    /* Le damos un tamaño de alto y ancho a los inputs */
+    padding: 10px  20px;
+    background-color: #f3f3f4;
+    /* Quitamos los bordes */
+    border: none;
+    /* Redondeamos los bordes */
+    border-radius: 5px;
+    /* padding: 10px; */
+    /* Quitamos los bordes que se ponen cuando escribimos*/
+    outline: none;
+    /* Le damos el tamaño de fuente al texto que se escribe en los inputs, a nuestro criterio el 14 se ve bien */
+    font-size: 14px;
+}
+
+/*Personalizamos los input que estan relacionados con las etiquetas label, aqui NO modificará los de nombre y nombre de usuario pq estan en un contenedor con su propia clase*/
+.container label input{
+    /*Le damos un ancho del 100% para que se ajuste a todo el contenedor en el que esta, aqui por ejemplo a los label "nombre" y "nombre de usuario" los pone de forma pareja pq ambos estan en un contenedor*/
+    /* width: 90%; */
+    /* Le damos un tamaño de alto y ancho a los inputs */
+    padding: 10px  20px;
+    background-color: #f3f3f4;
+    /* Quitamos los bordes */
+    border: none;
+    /* Redondeamos los bordes */
+    border-radius: 5px;
+    /* padding: 10px; */
+    /* Quitamos los bordes que se ponen cuando escribimos*/
+    outline: none;
+    /* Le damos el tamaño de fuente al texto que se escribe en los inputs, a nuestro criterio el 14 se ve bien */
+    font-size: 14px;
+}
+
+
+
+/*Animación de inputs*/
+
+/*Hover es para cuando pasamos el raton encima*/
+.formulario label input:hover{
+    /* Le cambiamos el color a blanco cuando pasamos encima */
+    background-color: white;
+    /* Le damos un borde solido delgadito */
+    border: solid 1px #f3f3f4;
+    /* Le damos una sombra de color rosita con transparencia de 0 en X y de 0 en Y */
+    /* !Verificar mas a fondo esta propiedad */
+    box-shadow: 0 0 4px #eb50ff4f;
+}
+
+/*focus indica que se hará cuando se tenga seleccionado el campo*/
+/* Vamos a replicar lo mismo que en el hover */
+.formulario label input:focus{
+    background-color: white;
+    border: solid 1px #f3f3f4;
+    box-shadow: 0 0 4px #eb50ff4f;
+}
+
+/*Personalización del check box de terminos y condiciones*/
+#checkbox-label{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Aqui le damos un ancho de 20px al check box */
+/* !Invesdtigar mas al respecto de esto */
+#checkbox-label input[type="checkbox"] {
+    width: 20px;
+}
+
+#checkbox-label span {
+    font-weight: 400;
+}
+
+/*Boton para crear cuenta*/
+.crear-cuenta{
+    background-color: #ea4c89;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 14pt;
+    text-align: center;
+    cursor: pointer;
+    padding: 15px;
+    
+}
+
+.crear-cuenta:hover{
+    opacity: 70%;
+}
