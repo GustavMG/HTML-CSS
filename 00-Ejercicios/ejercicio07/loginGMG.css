@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
 /*Aplicamos la fuente a TODO el documento*/
+
+/* Modo Oscuro */
+
 *{
     font-family: 'Ubuntu', sans-serif;
     background-color: #161717;
@@ -214,7 +217,9 @@
     font-size: 14px;
 }
 
-
+#password::placeholder{
+    color: white;
+}
 
 /*Animación de inputs*/
 

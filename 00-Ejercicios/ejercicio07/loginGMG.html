@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="./loginGMG.css">
+</head>
+
+<body>
+    <nav>
+
+    </nav>
+    <!--Modo oscuro-->
+    <section class="section-registro">
+
+        <div class="container">
+            <!--Se abre un contenedor general para el formulario-->
+            <h3>Formulario de registro.</h3>
+            <!--Sección de inicio mediante redes-->
+            <div class="botones-redes">
+                <!--Google-->
+                <a class="link-redes" href="http://google.com" target="_blank">
+                    <button class="btn-google">
+                        <!--Usamos le etiqueta picture ya que que se utiliza para proporcionar varias fuentes de imágenes y permitir que el navegador elija la imagen más adecuada según las capacidades y características del dispositivo de visualización. -->
+                        <picture>
+                            <img id="logo-google"
+                                src="https://entredichos.trabajosocial.unlp.edu.ar/wp-content/uploads/sites/6/2016/12/Google_-G-_Logo.svg_.png"
+                                alt="Logo Google">
+                        </picture>
+                        <!--Agregamos una etiqueta span para poder modificar libremente el texto ingresado y que este dentro del boton-->
+                        <span>Acceder con Google</span>
+                    </button>
+                </a>
+
+                <!--Facebook-->
+                <a class="link-redes" href="https://twitter.com/" target="_blank">
+                    <button class="btn-twitter">
+                        <span>t</span>
+                    </button>
+                </a>
+            </div>
+
+            <!--Separador del "inicio mediante redes" con formulario-->
+            <div class="separador">
+                <!--Etiqueta para generar una linea horizontal -------------------  -->
+                <hr>
+                <span>O</span>
+                <hr>
+            </div>
+
+            <!--Formulario de registro-->
+            <form class="formulario" action="" method="">
+                <!--Entrada de nombre-->
+                <div class="nom-nomus">
+                    <label for="nombre">
+                        <span>Nombre</span>
+                        <input type="text" name="nombre" id="nombre" pattern="[A-Za-z]+">
+                    </label>
+
+                    <!--Entrada de nombre de usuario-->
+                    <label for="nombre-usuario">
+                        <span>Nombre de usuario</span>
+                        <input type="text" name="nombre-usuario" id="nombre-usuario" required>
+                    </label>
+                </div>
+
+                <!--Entrada de correo-->
+                <label for="email">
+                    <span>Correo electrónico</span>
+                    <input type="email" name="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                        required>
+                </label>
+
+                <!--Entrada de contraseña-->
+                <label for="password">
+                    <span>Contraseña</span>
+                    <input type="password" name="password" id="password" placeholder="6+ caracteres" required>
+                </label>
+
+                <!--Casilla de aceptación de terminos-->
+                <label for="checkbox" id="checkbox-label">
+                    <input type="checkbox" id="checkbox">
+                    <span>Creando esta cuenta acepto los términos, condiciones, politicas de privacidad y recibir
+                        notificación</span>
+                </label>
+
+                <button type="submit" class="crear-cuenta">
+                    <span>Crear cuenta</span>
+                </button>
+
+            </form>
+        </div>
+        <!--Se cierra contenedor general del formulario-->
+    </section>
+</body>
+
+</html>

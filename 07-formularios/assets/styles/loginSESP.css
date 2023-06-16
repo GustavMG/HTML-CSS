@@ -1,0 +1,230 @@
+/*Conexión con las fuentes de Google Fonts en el CSS en lugar de ocupar espacio en el HTML*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+/*Aplicamos la fuente a TODO el documento*/
+*{
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+body{
+    background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.section-registro{
+    
+    
+}
+
+.logo-sesp{
+    width: 30%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 450px;
+    padding: 15px;
+    border: solid #8b8b8b;
+    border-radius: 10px;
+    background-color: #ccc;
+}
+
+
+
+/*Personalización de botones para acceso mediante redes*/
+.botones-redes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*Separamos los botones entre sí*/
+    gap: 20px;
+}
+
+.btn-google{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: #1A73E8;
+    border: none;
+    border-radius: 5px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.btn-google:hover{
+    opacity: 75%;
+}
+
+.btn-google picture{
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 2px;
+    display: flex;
+    /* align-self: center; */
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-google picture img{
+    width: 80%;
+}
+
+.btn-google span{
+    color: white;
+    font-weight: 500;
+    padding: 15px;
+}
+
+.btn-facebook{
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 75%;
+}
+
+.btn-facebook:hover{
+    opacity: 1;
+}
+
+.btn-facebook picture{
+    width: 35px;
+    height: 35px;
+}
+
+.btn-facebook picture img{
+    width: 100%;
+}
+
+.link-redes{
+    color: transparent;
+}
+
+/*Personalización de división entre inicio mediante redes y formulario*/
+.separador{
+    display: flex;
+    /*Le doy el 100% del largo ya que la propiedades de flex me lo reducen, INVESTIGAR PQ*/
+    width: 100%;
+    gap: 20px;
+}
+
+.separador hr{
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #7a7a7a;
+}
+
+.separador span{
+    color: #7a7a7a;
+}
+
+/*Personalización del formulario*/
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+}
+
+
+.nom-nomus{
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    width: 100%;
+}
+
+.formulario label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+form label span{
+    font-weight: 700;
+}
+
+.formulario label input{
+    width: 90%;
+    padding: 10px  20px;
+    background-color: #f3f3f4;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+}
+
+.nom-nomus label input{
+    width: 80%;
+    padding: 10px  26px;
+    background-color: #f3f3f4;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+/*Animación de inputs*/
+
+/*Hover es para cuando pasamos el raton encima*/
+.formulario label input:hover{
+    background-color: white;
+    border: solid 1px #f3f3f4;
+    box-shadow: 0 0 4px #eb50ff4f;
+}
+
+/*focus indica que se hará cuando se tenga seleccionado el campo*/
+.formulario label input:focus{
+    background-color: white;
+    border: solid 1px #f3f3f4;
+    box-shadow: 0 0 4px #eb50ff4f;
+}
+
+/*Personalización del check box de terminos y condiciones*/
+.checkbox-label{
+    display: flex;
+    flex-direction: row;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 10px;
+}
+
+.checkbox-label span {
+    font-weight: 400;
+}
+
+/*Boton para crear cuenta*/
+.crear-cuenta{
+    background-color: #FFC107;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-weight: 500;
+    font-size: 14pt;
+    text-align: center;
+    cursor: pointer;
+    padding: 15px;
+    
+}
+
+.crear-cuenta:hover{
+    opacity: 70%;
+}
